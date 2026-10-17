@@ -5,6 +5,8 @@
  */
 import { app } from 'electron';
 import { execFileSync } from 'node:child_process';
+import fs from 'node:fs';
+import path from 'node:path';
 import {
   ROOT_DIR,
   loadConfig,
@@ -68,9 +70,27 @@ if (process.env.CAMEL_PET_DISABLE_GPU === '1') {
  *
  * 实测结论：崩溃发生在 Electron 原生初始化阶段，**早于 main.js 的第一行**，
  * 因此 `app.commandLine.appendSwitch('no-sandbox')` 在这里**无效**（已验证过，不要加回来）。
- * 唯一有效的办法是启动时在命令行上带 `--no-sandbox`，见仓库根目录的「启动骆驼桌宠.cmd」。
+ * 唯一有效的办法是启动时在命令行上带 `--no-sandbox`，由根目录的 CamelPet.exe（自检启动器）负责。
  * 桌宠只加载打包内的本地页面、不加载远程内容，所以该机器上关沙箱是可接受的权衡。
  */
+
+/**
+ * 一次性迁移旧的数据目录。
+ *
+ * 旧版本把应用名当成目录名，用户数据落在 `%APPDATA%\骆驼桌宠`；
+ * 现在统一改成纯英文的 `%APPDATA%\CamelPet`（路径不掺中文，跨工具更稳）。
+ * 只有新目录里还没有 data 时才搬一次，失败也不影响启动。
+ */
+try {
+  const legacyData = path.join(app.getPath('appData'), '骆驼桌宠', 'data');
+  const currentData = path.join(app.getPath('userData'), 'data');
+  if (!fs.existsSync(currentData) && fs.existsSync(legacyData)) {
+    fs.cpSync(legacyData, currentData, { recursive: true });
+    console.log(`[bootstrap] 已迁移旧数据目录：${legacyData} -> ${currentData}`);
+  }
+} catch (_) {
+  /* 迁移是尽力而为 */
+}
 
 /**
  * 数据根定位（必须在**任何** loadConfig / loadSkinConfig 之前跑完）。

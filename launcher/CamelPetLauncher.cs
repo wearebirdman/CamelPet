@@ -7,7 +7,7 @@
 //   2) 受限令牌可能写不进 %APPDATA%，Chromium 会因为建不出锁文件而静默退出。
 //
 // 所以这里做两件事，且只在必要时才做：
-//   * 数据目录：优先 %APPDATA%\骆驼桌宠；不可写时退回程序目录下的 data\（便携模式）
+//   * 数据目录：优先 %APPDATA%\CamelPet；不可写时退回程序目录下的 data\（便携模式）
 //   * 启动：先按标准方式启动；只有检测到 0x80000003 才降级为 --no-sandbox 重试
 //
 // 编译成 winexe（GUI 子系统），双击不会闪黑框。
@@ -171,7 +171,7 @@ internal static class CamelPetLauncher
         }
 
         string roaming = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-        string preferred = Path.Combine(roaming, "骆驼桌宠");
+        string preferred = Path.Combine(roaming, "CamelPet");
         if (IsWritable(preferred))
         {
             return string.Empty; // 用默认位置，不需要传参

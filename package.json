@@ -1,8 +1,8 @@
 {
   "name": "camel-pet",
-  "productName": "骆驼桌宠",
+  "productName": "CamelPet",
   "version": "1.0.0",
-  "description": "A Windows desktop pet with pixel-art skins (骆驼桌宠).",
+  "description": "A Windows desktop pet with pixel-art skins.",
   "main": "src/main/index.js",
   "scripts": {
     "start": "electron . --no-sandbox --user-data-dir=temp/userdata",

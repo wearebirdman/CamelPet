@@ -55,7 +55,7 @@ npm start        # 或 Windows 下双击 run.cmd
 
 1. **先按标准方式启动**；只有检测到 Chromium 沙箱初始化失败（退出码 `0x80000003`）时，
    才自动加 `--no-sandbox` 重试。正常电脑上行为与未加启动器时完全一致。
-2. **选一个能写的数据目录**：优先 `%APPDATA%\骆驼桌宠`；写不了（受限令牌/便携模式）时
+2. **选一个能写的数据目录**：优先 `%APPDATA%\CamelPet`；写不了（受限令牌/便携模式）时
    退回程序目录下的 `data\`。整个过程记在 `launcher.log`。
 
 为什么需要：某些被安全策略托管的 Windows（例如装有 `CodexSandboxUsers` 这类沙箱服务）里，
@@ -66,7 +66,7 @@ Chromium 的沙箱初始化会被拒绝，进程在 `main.js` 执行之前就崩
 
 ## 数据位置
 
-- 普通安装：`%APPDATA%\骆驼桌宠\data\`
+- 普通安装：`%APPDATA%\CamelPet\data\`
 - 便携/受限：程序目录下的 `data\`
 
 设置、台词、语音包都在里面，卸载重装不丢（卸载时不会删除）。设置「关于」页能看到实际路径。
@@ -135,6 +135,7 @@ AI 抠图路线用）。
 ```
 assets/           皮肤帧、音频与应用图标
 config/           默认配置与设置 schema
+docs/             发布说明（打进绿色版 zip 的那份 README）
 launcher/         启动器源码（C#，编译产物是根目录的 CamelPet.exe）
 src/main/         Electron 主进程：窗口、IPC、菜单、托盘、设置与数据服务
 src/renderer/     渲染层：帧动画、交互、气泡、设置界面与音频播放
