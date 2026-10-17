@@ -1,0 +1,47 @@
+# 依赖
+node_modules/
+
+# 构建产物（安装包 / 便携版 / 绿色版目录）
+dist/
+release/
+out/
+*.asar
+
+# 编译出来的启动器（由 npm run launcher 生成，源码在 launcher/）
+/CamelPet.exe
+/CamelPetCore.exe
+
+# 运行期产物与日志（Electron 的 userData 默认在 %APPDATA%，
+# 受限环境会退化到程序目录下的 data/ —— 两种都不进仓库）
+temp/
+data/
+*.log
+launcher.log
+main.log
+diagnostics.log
+
+# 离线安装包 / 缓存（体积 100MB 级，不要进仓库）
+*.zip
+*.7z
+
+# 素材导出目录（由脚本从 assets 生成，可重算）
+exports/
+
+# 原始素材：第三方视频/音频（庆祝、跳水、siuuu 等），权利归原权利人，
+# 只在本地做素材管线用，**不进公开仓库**（LICENSE/README 有声明）
+raw/
+
+# Python 缓存
+__pycache__/
+*.py[cod]
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 环境
+.env
+.env.local

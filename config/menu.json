@@ -1,0 +1,33 @@
+{
+  "items": [
+    { "id": "settings", "label": "设置", "action": "settings:open" },
+    {
+      "dynamic": "actions"
+    },
+    {
+      "label": "语音",
+      "items": [
+        {
+          "type": "checkbox",
+          "label": "静音",
+          "action": "voice:toggle-mute",
+          "checkedFrom": "voiceMuted"
+        },
+        { "type": "separator" },
+        {
+          "label": "音量",
+          "items": [
+            { "type": "radio", "label": "静音（0%）", "action": "voice:volume:0", "checkedFrom": "voiceVolume", "checkedValue": 0 },
+            { "type": "radio", "label": "25%", "action": "voice:volume:25", "checkedFrom": "voiceVolume", "checkedValue": 25 },
+            { "type": "radio", "label": "50%", "action": "voice:volume:50", "checkedFrom": "voiceVolume", "checkedValue": 50 },
+            { "type": "radio", "label": "75%", "action": "voice:volume:75", "checkedFrom": "voiceVolume", "checkedValue": 75 },
+            { "type": "radio", "label": "100%", "action": "voice:volume:100", "checkedFrom": "voiceVolume", "checkedValue": 100 }
+          ]
+        },
+        { "dynamic": "voicePacks" }
+      ]
+    },
+    { "type": "separator" },
+    { "id": "quit", "label": "退出", "action": "quit" }
+  ]
+}

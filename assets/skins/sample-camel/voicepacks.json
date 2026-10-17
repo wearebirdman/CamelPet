@@ -1,0 +1,11 @@
+{
+  "packs": [
+    {
+      "id": "siuuu",
+      "name": "siuuu（示例皮肤）",
+      "file": "siuuu.wav",
+      "enabled": true,
+      "optimized": true
+    }
+  ]
+}

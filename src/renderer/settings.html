@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>骆驼桌宠 · 设置</title>
+    <link rel="stylesheet" href="./settings.css" />
+  </head>
+  <body>
+    <!-- 左侧分类导航与右侧内容区都由 settings.js 依据 config/settings.json 渲染 -->
+    <div id="settings">
+      <nav id="nav" aria-label="设置分类"></nav>
+      <main id="content"></main>
+    </div>
+
+    <!--
+      添加语音包对话框。
+      刻意写死在 HTML 里而不是运行时拼字符串：结构固定、只有一处，
+      写在标签里能被编辑器检出错别字，样式选择器也更直观。
+      显示/隐藏由 settings.js 控制（hidden 属性 + 遮罩动画）。
+    -->
+    <div id="voice-dialog" class="dialog-mask" hidden>
+      <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="voice-dialog-title">
+        <h2 id="voice-dialog-title" class="dialog-title">添加音频</h2>
+
+        <label class="field">
+          <span class="field-label">名称</span>
+          <input id="voice-name" type="text" maxlength="24" placeholder="例如 siuuu" />
+        </label>
+
+        <label class="field">
+          <span class="field-label">音频地址</span>
+          <span class="field-row">
+            <input id="voice-path" type="text" placeholder="可直接填写路径，或点右侧浏览选择" />
+            <button type="button" id="voice-browse" class="btn">浏览…</button>
+          </span>
+        </label>
+
+        <p id="voice-hint" class="dialog-hint"></p>
+
+        <p id="voice-error" class="dialog-error" hidden></p>
+
+        <div class="dialog-actions">
+          <button type="button" id="voice-cancel" class="btn">取消</button>
+          <button type="button" id="voice-confirm" class="btn btn-primary">添加</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./settings.js"></script>
+  </body>
+</html>

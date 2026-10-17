@@ -1,0 +1,14 @@
+# 统一换行符与二进制标记，避免 Windows/Linux 之间出现整文件 diff
+* text=auto eol=lf
+
+# 批处理/PowerShell 脚本必须是 CRLF，否则 cmd 解析会出问题
+*.cmd text eol=crlf
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+
+# 二进制资源
+*.png binary
+*.ico binary
+*.wav binary
+*.jpg binary
+*.asar binary

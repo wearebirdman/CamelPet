@@ -1,0 +1,14 @@
+{
+  "bubbleDurationMs": 2600,
+  "clickLinesEnabled": true,
+  "clickActionsEnabled": false,
+  "idleDialogueEnabled": true,
+  "idleDialogueInterval": "3-6",
+  "click": {
+    "lines": [
+      "示例皮肤：换台成功。",
+      "示例皮肤：声音也跟着换了。"
+    ],
+    "states": []
+  }
+}

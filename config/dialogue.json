@@ -1,0 +1,14 @@
+{
+  "bubbleDurationMs": 3200,
+  "clickLinesEnabled": false,
+  "clickActionsEnabled": false,
+  "idleDialogueEnabled": true,
+  "idleDialogueInterval": "3-6",
+  "click": {
+    "lines": [
+      "自律使我变强。",
+      "拿捏。"
+    ],
+    "states": []
+  }
+}

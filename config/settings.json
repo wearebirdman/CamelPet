@@ -1,0 +1,386 @@
+{
+  "categories": [
+    {
+      "id": "general",
+      "label": "通用",
+      "items": [
+        {
+          "id": "autoLaunch",
+          "label": "开机自启动",
+          "description": "登录 Windows 后自动启动桌宠；写入后会自动回读校验",
+          "control": "switch",
+          "source": {
+            "file": "app.json",
+            "key": "autoLaunch"
+          },
+          "default": false
+        },
+        {
+          "id": "alwaysOnTop",
+          "label": "窗口置顶",
+          "description": "让桌宠始终显示在其他窗口之上，改动立即生效",
+          "control": "switch",
+          "source": {
+            "file": "window.json",
+            "key": "alwaysOnTop"
+          },
+          "default": true
+        },
+        {
+          "id": "autoDock",
+          "label": "自动停靠",
+          "description": "桌宠可以被拖到屏幕边沿外挂着，但快看不见时（露出不足三分之一）会自动拉回屏幕内；拖拽过程不受影响，只在松手、切换大小和启动时校正",
+          "control": "switch",
+          "source": {
+            "file": "window.json",
+            "key": "autoDock"
+          },
+          "default": true
+        },
+        {
+          "id": "dragThresholdPx",
+          "label": "拖拽灵敏度",
+          "description": "位移超过该值才判定为拖拽，否则算单击；数值越大越容易触发单击",
+          "control": "slider",
+          "source": {
+            "file": "behavior.json",
+            "key": "dragThresholdPx"
+          },
+          "default": 4,
+          "min": 2,
+          "max": 12,
+          "unit": "px"
+        }
+      ]
+    },
+    {
+      "id": "appearance",
+      "label": "外观",
+      "items": [
+        {
+          "id": "spriteSize",
+          "label": "大小",
+          "description": "桌宠在屏幕上的显示尺寸",
+          "control": "select",
+          "channel": "set-sprite-size",
+          "source": {
+            "file": "skin.json",
+            "key": "spriteSize"
+          },
+          "default": 192,
+          "options": [
+            {
+              "value": 128,
+              "label": "小（128）"
+            },
+            {
+              "value": 192,
+              "label": "中（192）"
+            },
+            {
+              "value": 256,
+              "label": "大（256）"
+            }
+          ]
+        },
+        {
+          "id": "activeSkin",
+          "label": "皮肤",
+          "description": "切换整套形象（台词、语音、动作随皮肤一起换）",
+          "control": "select",
+          "source": {
+            "file": "skin.json",
+            "key": "activeSkin"
+          },
+          "default": "default",
+          "channel": "set-skin",
+          "optionsFrom": "skins"
+        },
+        {
+          "id": "opacity",
+          "label": "不透明度",
+          "description": "让桌宠半透明地待在桌面上，拖动时立即生效；最低 30%，再低就基本看不见了",
+          "control": "slider",
+          "source": {
+            "file": "window.json",
+            "key": "opacity"
+          },
+          "default": 100,
+          "min": 30,
+          "max": 100,
+          "step": 5,
+          "unit": "%"
+        }
+      ]
+    },
+    {
+      "id": "behavior",
+      "label": "行为",
+      "groups": [
+        {
+          "id": "dialogue",
+          "label": "对话",
+          "items": [
+            {
+              "id": "clickLinesEnabled",
+              "label": "单击触发台词",
+              "description": "单击桌宠时随机冒出一句台词",
+              "control": "switch",
+              "exclusiveGroup": "clickTrigger",
+              "source": {
+                "file": "dialogue.json",
+                "key": "clickLinesEnabled"
+              },
+              "default": true
+            },
+            {
+              "id": "idleDialogueEnabled",
+              "label": "定时随机对话",
+              "description": "闲下来时自动冒一句台词",
+              "control": "switch",
+              "source": {
+                "file": "dialogue.json",
+                "key": "idleDialogueEnabled"
+              },
+              "default": false
+            },
+            {
+              "id": "idleDialogueInterval",
+              "label": "随机对话频率",
+              "control": "select",
+              "parentId": "idleDialogueEnabled",
+              "source": {
+                "file": "dialogue.json",
+                "key": "idleDialogueInterval"
+              },
+              "default": "3-6",
+              "options": [
+                {
+                  "value": "1-3",
+                  "label": "1~3 分钟"
+                },
+                {
+                  "value": "3-6",
+                  "label": "3~6 分钟"
+                },
+                {
+                  "value": "6-10",
+                  "label": "6~10 分钟"
+                }
+              ]
+            },
+            {
+              "id": "bubbleDurationMs",
+              "label": "气泡显示时长",
+              "control": "slider",
+              "source": {
+                "file": "dialogue.json",
+                "key": "bubbleDurationMs"
+              },
+              "default": 1800,
+              "min": 500,
+              "max": 6000,
+              "step": 100,
+              "unit": "ms"
+            },
+            {
+              "id": "clickLines",
+              "label": "台词池",
+              "description": "每行一条，单击或定时显示时随机抽取；留空则不冒气泡",
+              "control": "textarea",
+              "source": {
+                "file": "dialogue.json",
+                "key": "click.lines"
+              },
+              "default": []
+            }
+          ]
+        },
+        {
+          "id": "action",
+          "label": "动作",
+          "items": [
+            {
+              "id": "clickActionsEnabled",
+              "label": "单击触发动作",
+              "description": "单击桌宠时随机播放一个动作；动作池由台词配置里的 click.states 指定，留空则单击只出台词不播动作",
+              "control": "switch",
+              "exclusiveGroup": "clickTrigger",
+              "source": {
+                "file": "dialogue.json",
+                "key": "clickActionsEnabled"
+              },
+              "default": true
+            },
+            {
+              "id": "idleActionEnabled",
+              "label": "定时随机动作",
+              "description": "闲下来时偶尔自动播放一个完整动作（从当前皮肤的庆祝 / 跳水等大动作里随机挑一个）",
+              "control": "switch",
+              "source": {
+                "file": "behavior.json",
+                "key": "idleActionEnabled"
+              },
+              "default": false
+            },
+            {
+              "id": "idleActionInterval",
+              "label": "随机动作频率",
+              "control": "select",
+              "parentId": "idleActionEnabled",
+              "source": {
+                "file": "behavior.json",
+                "key": "idleActionInterval"
+              },
+              "default": "3-6",
+              "options": [
+                {
+                  "value": "1-3",
+                  "label": "1~3 分钟"
+                },
+                {
+                  "value": "3-6",
+                  "label": "3~6 分钟"
+                },
+                {
+                  "value": "6-10",
+                  "label": "6~10 分钟"
+                }
+              ]
+            },
+            {
+              "id": "idleFrequency",
+              "label": "待机动作频率",
+              "description": "控制待机时眨眼的间隔（多久眨一次，不是单次眨眼的快慢）",
+              "control": "select",
+              "source": {
+                "file": "behavior.json",
+                "key": "idleFrequency"
+              },
+              "default": "medium",
+              "options": [
+                {
+                  "value": "off",
+                  "label": "关闭（不眨眼）"
+                },
+                {
+                  "value": "low",
+                  "label": "低（8~15 秒）"
+                },
+                {
+                  "value": "medium",
+                  "label": "中（3~7 秒）"
+                },
+                {
+                  "value": "high",
+                  "label": "高（1~3 秒）"
+                }
+              ],
+              "note": "待机时左右摆动是待机动画本身，不受这项影响"
+            }
+          ]
+        },
+        {
+          "id": "voice",
+          "label": "语音",
+          "items": [
+            {
+              "id": "voiceMuted",
+              "label": "静音",
+              "description": "关闭所有音效与语音",
+              "control": "switch",
+              "source": {
+                "file": "voice.json",
+                "key": "muted"
+              },
+              "default": false
+            },
+            {
+              "id": "voiceVolume",
+              "label": "音量",
+              "description": "拖动时立即生效，右侧「试听」可随时确认效果",
+              "control": "slider",
+              "preview": true,
+              "sample": true,
+              "source": {
+                "file": "voice.json",
+                "key": "volume"
+              },
+              "default": 70,
+              "min": 0,
+              "max": 100,
+              "unit": "%"
+            },
+            {
+              "id": "clickVoiceEnabled",
+              "label": "单击触发语音",
+              "description": "单击桌宠时随机播一句语音",
+              "control": "switch",
+              "exclusiveGroup": "clickTrigger",
+              "source": {
+                "file": "voice.json",
+                "key": "clickTriggerEnabled"
+              },
+              "default": false
+            },
+            {
+              "id": "voiceRandomEnabled",
+              "label": "定时随机语音",
+              "description": "闲下来时偶尔自动播一句语音",
+              "control": "switch",
+              "source": {
+                "file": "voice.json",
+                "key": "randomEnabled"
+              },
+              "default": false
+            },
+            {
+              "id": "voiceRandomInterval",
+              "label": "随机语音频率",
+              "control": "select",
+              "parentId": "voiceRandomEnabled",
+              "source": {
+                "file": "voice.json",
+                "key": "randomInterval"
+              },
+              "default": "3-6",
+              "options": [
+                {
+                  "value": "1-3",
+                  "label": "1~3 分钟"
+                },
+                {
+                  "value": "3-6",
+                  "label": "3~6 分钟"
+                },
+                {
+                  "value": "6-10",
+                  "label": "6~10 分钟"
+                }
+              ],
+              "note": "语音包时长上限 30 秒，最短 1 分钟的间隔天然不会打断上一句"
+            },
+            {
+              "id": "voicePackManage",
+              "label": "语音包管理",
+              "description": "关闭的语音包不再参与随机播放；每行可试听、删除",
+              "control": "voicePacks",
+              "source": {
+                "file": "voicepacks.json",
+                "key": "packs"
+              },
+              "default": [],
+              "note": "音频会复制到 assets/audio/ 统一保管，原始文件之后移动或删除都不影响"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "label": "关于",
+      "kind": "about",
+      "items": []
+    }
+  ]
+}

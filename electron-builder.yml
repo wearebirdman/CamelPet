@@ -1,0 +1,89 @@
+# electron-builder 打包配置（Windows 安装包 + 便携版）
+#
+# 用法：
+#   npm run pack   只构建"解包目录"（dist/win-unpacked/），用于快速实机验证，不出安装包
+#   npm run dist   出 NSIS 安装包 + 便携版 exe（产物在 dist/）
+#
+# 设计要点（每一条都是踩过坑才这么写的，改之前先看注释）：
+#   1) 只打包运行必需的东西。tools/ raw/ 不进安装包 ——
+#      验证脚本里有抓屏、注入配置这类开发动作，装到用户机器上纯属负担。
+#   2) 可写数据不进包（见 src/main/config.js 的两个根目录）：包里只放"出厂默认值"，
+#      用户改的配置与导入的语音包落在 %APPDATA%\<应用名>\data 下。
+#   3) 素材走 asar（读取快、安装快），但 **图标必须 unpack** ——
+#      托盘 / 窗口图标走 nativeImage + 系统 API，是从 asar 里读不稳的一类资源。
+#   4) 安装模式 perMachine=false：装到 %LOCALAPPDATA%，不需要管理员权限，
+#      与"用户自己的配置写在 userData"这套数据模型一致。
+
+appId: com.camelpet.desktop
+# productName 写在 package.json（不在本文件）：
+# Electron 的 app.getName() / userData 目录名都从那里读，两处都写迟早会漂移
+copyright: Copyright © 2026 CamelPet contributors
+
+directories:
+  output: dist
+  buildResources: build
+
+# 打包后把入口换成「自检启动器」：CamelPet.exe(启动器) + CamelPetCore.exe(真正的 Electron)。
+# 这样在沙箱受限的机器上也能自动降级启动，详见 tools/after-pack.cjs
+afterPack: tools/after-pack.cjs
+
+# 只打进安装包的文件（白名单，其余一律不进）
+files:
+  - src/**/*
+  - config/**/*
+  - assets/icons/**/*
+  # avatar-source.png 只是图标管线的净版原图（重新导出尺寸用），运行时用不到，不进包
+  - '!assets/icons/avatar-source.png'
+  - assets/audio/**/*
+  # 皮肤：清单 + 台词 + 语音数据 + 素材。
+  # 注意不包括 sample-camel：它是回归测试用的数据样本（manifest + 台词 + 语音），
+  # 精灵帧已从仓库删除，本来也不该发给用户。想一起发的话删掉下面那行排除即可。
+  - assets/skins/**/*
+  - '!assets/skins/sample-camel/**'
+  - package.json
+  - LICENSE
+
+# 图标不进 asar：托盘/窗口图标由 nativeImage 与系统 API 读取，
+# 从 asar 里读属于"能跑但别赌"的一类（nativeImage 对 asar 的支持有平台差异）。
+asar: true
+asarUnpack:
+  - assets/icons/**
+
+win:
+  # 可执行文件名保持 ASCII：中文 exe 名在部分工具链/上传环节会出问题，
+  # 桌面快捷方式与开始菜单显示的才是中文（见下面 nsis.shortcutName）
+  executableName: CamelPet
+  icon: assets/icons/app-icon.ico
+  target:
+    - target: nsis
+      arch:
+        - x64
+    - target: portable
+      arch:
+        - x64
+  # 产物名保持 ASCII，便于上传到 GitHub Releases 后直接贴链接
+  artifactName: CamelPet-${version}-${arch}-setup.${ext}
+
+nsis:
+  # 向导式安装（不是一键静默），允许改安装目录 —— 装自己电脑上的人通常想看一眼
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  # 装到 %LOCALAPPDATA%：无需管理员权限，也不会撞 Program Files 的只读限制
+  perMachine: false
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: 骆驼桌宠
+  uninstallDisplayName: 骆驼桌宠 ${version}
+  # 升级安装时先关掉正在运行的桌宠，否则文件被占用会失败
+  deleteAppDataOnUninstall: false
+
+portable:
+  artifactName: CamelPet-${version}-${arch}-portable.${ext}
+
+# 本地已装好 Electron（node_modules/electron/dist），直接用它的发行版，
+# 免得每次构建都去 GitHub 下 100+ MB 的压缩包。electronVersion 必须与它一致。
+electronVersion: 32.2.7
+electronDist: node_modules/electron/dist
+
+# 不配置 publish：产物在本地产出，由你手动上传到 GitHub Releases。
+# （配了 publish 之后 electron-builder 会尝试推送，没有仓库信息时会失败。）

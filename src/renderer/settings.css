@@ -1,0 +1,558 @@
+/*
+ * 设置窗口样式。
+ * 刻意与桌宠页面（index.html 的内联 CSS）分开：桌宠是透明无边框的小窗、只画一个角色，
+ * 这里是常规表单界面，两者几乎没有可复用部分，此时抽公共样式属于过度设计。
+ */
+
+:root {
+  --bg: #f6f7f9;
+  --panel: #ffffff;
+  --border: #e3e6ea;
+  --text: #1f2328;
+  --text-dim: #6b7280;
+  --accent: #2f6feb;
+  --accent-soft: #eaf1fe;
+  --warn-bg: #fff4e5;
+  --warn-text: #9a5b00;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font: 14px/1.5 'Microsoft YaHei', ui-sans-serif, system-ui, sans-serif;
+  user-select: none;
+}
+
+#settings {
+  display: grid;
+  grid-template-columns: 176px 1fr;
+  height: 100vh;
+}
+
+/* ---------- 左侧分类导航 ---------- */
+
+#nav {
+  background: var(--panel);
+  border-right: 1px solid var(--border);
+  padding: 14px 10px;
+  overflow-y: auto;
+}
+
+.nav-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-dim);
+  letter-spacing: 0.08em;
+  padding: 4px 10px 10px;
+}
+
+.nav-item {
+  display: block;
+  width: 100%;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  text-align: left;
+  padding: 9px 10px;
+  border-radius: 7px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  background: #f1f3f6;
+}
+
+.nav-item[aria-current='true'] {
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ---------- 右侧内容区 ---------- */
+
+#content {
+  padding: 22px 26px 32px;
+  overflow-y: auto;
+}
+
+.panel-title {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+
+.panel-hint {
+  color: var(--text-dim);
+  font-size: 12px;
+  margin: 0 0 18px;
+}
+
+/* 分类内的小标题（行为分类按「对话 / 动作 / 语音」分组） */
+.group-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  margin: 22px 0 2px;
+}
+
+.group-title:first-of-type {
+  margin-top: 6px;
+}
+
+.empty-hint {
+  color: var(--text-dim);
+  font-size: 12px;
+  font-style: italic;
+}
+
+/* ---------- 设置项 ---------- */
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.item:last-child {
+  border-bottom: 0;
+}
+
+/* 绑定在开关下的子控件：父开关关闭时整行隐藏 */
+.item[hidden] {
+  display: none;
+}
+
+.item-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.item-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.item-desc {
+  color: var(--text-dim);
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+.item-note {
+  color: var(--text-dim);
+  font-size: 12px;
+  margin-top: 3px;
+  font-style: italic;
+}
+
+.item-control {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 占位项角标：让"能点但没生效"和"真的生效"一眼可分 */
+.badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: var(--warn-bg);
+  color: var(--warn-text);
+  white-space: nowrap;
+}
+
+.value-text {
+  min-width: 52px;
+  text-align: right;
+  color: var(--text-dim);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- 控件 ---------- */
+
+select {
+  font: inherit;
+  min-width: 190px;
+  padding: 6px 9px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: var(--panel);
+  color: inherit;
+}
+
+select:focus-visible,
+input[type='range']:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+textarea {
+  font: 13px/1.6 ui-monospace, Consolas, monospace;
+  width: 320px;
+  height: 108px;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  resize: vertical;
+  background: var(--panel);
+  color: inherit;
+  user-select: text;
+}
+
+input[type='range'] {
+  width: 190px;
+  accent-color: var(--accent);
+}
+
+/* 开关 */
+.switch {
+  position: relative;
+  width: 42px;
+  height: 24px;
+  flex: 0 0 auto;
+}
+
+.switch input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  cursor: pointer;
+}
+
+.switch-track {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: #cfd4db;
+  transition: background 0.15s;
+  pointer-events: none;
+}
+
+.switch-track::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  transition: transform 0.15s;
+}
+
+.switch input:checked + .switch-track {
+  background: var(--accent);
+}
+
+.switch input:checked + .switch-track::after {
+  transform: translateX(18px);
+}
+
+/* 多开关列表（动作管理 / 语音包管理）
+ * 整块上下排布：标题与说明占整行，每个子项各占一行、标签在左开关在右，
+ * 这样开关列与页面上其他设置项对齐，标签也紧跟着自己的开关。
+ */
+.item-stacked {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+  padding-bottom: 16px;
+}
+
+.item-stacked .item-control {
+  justify-content: flex-start;
+}
+
+.switch-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.switch-list-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* ---------- 按钮 ---------- */
+
+.btn {
+  font: inherit;
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: var(--panel);
+  color: var(--text);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  background: #f1f3f6;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #2560d4;
+}
+
+/* 行内的小按钮（试听 / 删除）：不要抢走主要操作的位置感 */
+.btn-mini {
+  padding: 3px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+}
+
+/* 危险操作给一点视觉区隔，但不用大红色块 —— 删除失败也不该看起来像报错 */
+.btn-danger {
+  color: #b42318;
+  border-color: #f0c6c1;
+}
+
+.btn-danger:hover {
+  background: #fdf2f1;
+}
+
+/* ---------- 语音包管理 ---------- */
+
+.voice-packs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.voice-pack-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.voice-pack-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.voice-pack-name {
+  flex: 1;
+  min-width: 0;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 文件丢失 / 已停用：名字变灰，一眼能看出这个包当前不可用 */
+.voice-pack-row[data-missing='true'] .voice-pack-name,
+.voice-pack-row[data-enabled='false'] .voice-pack-name {
+  color: var(--text-dim);
+  font-weight: 400;
+}
+
+.voice-pack-meta {
+  flex: 0 0 auto;
+  color: var(--text-dim);
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+
+.voice-pack-tag {
+  flex: 0 0 auto;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: var(--warn-bg);
+  color: var(--warn-text);
+  white-space: nowrap;
+}
+
+.voice-pack-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ---------- 对话框 ---------- */
+
+.dialog-mask {
+  position: fixed;
+  inset: 0;
+  background: rgba(27, 31, 36, 0.42);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+}
+
+.dialog-mask[hidden] {
+  display: none;
+}
+
+.dialog {
+  width: 460px;
+  max-width: calc(100vw - 48px);
+  background: var(--panel);
+  border-radius: 12px;
+  padding: 20px 22px 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.24);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.dialog-title {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-dim);
+}
+
+.field-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.field input[type='text'] {
+  font: inherit;
+  flex: 1;
+  min-width: 0;
+  padding: 7px 10px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: var(--panel);
+  color: inherit;
+  user-select: text;
+}
+
+.field input[type='text']:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.dialog-hint {
+  margin: 0;
+  color: #6b7280;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.dialog-hint[hidden] {
+  display: none;
+}
+
+.dialog-error {
+  margin: 0;
+  padding: 7px 10px;
+  border-radius: 7px;
+  background: #fdf2f1;
+  color: #b42318;
+  font-size: 12px;
+}
+
+.dialog-error[hidden] {
+  display: none;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 2px;
+}
+
+/* ---------- 关于页 ---------- */
+.about-row {
+  display: flex;
+  gap: 16px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.about-key {
+  flex: 0 0 132px;
+  color: var(--text-dim);
+}
+
+.about-value {
+  flex: 1;
+  min-width: 0;
+  word-break: break-all;
+  user-select: text;
+}
+
+/* ---------- 反馈提示 ---------- */
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%);
+  background: #1f2328;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+
+.toast[data-show='true'] {
+  opacity: 0.94;
+}

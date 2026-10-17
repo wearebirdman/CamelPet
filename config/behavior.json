@@ -1,0 +1,6 @@
+{
+  "idleActionEnabled": true,
+  "idleActionInterval": "3-6",
+  "idleFrequency": "medium",
+  "dragThresholdPx": 5
+}

@@ -1,0 +1,32 @@
+MIT License
+
+Copyright (c) 2026 CamelPet contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+--------------------------------------------------------------------------
+关于素材（assets/ 下的图片与音频）
+
+本仓库的代码适用上述 MIT 许可，但 assets/ 目录中的美术资源不在此列：
+它们由第三方形象/AI 生成视频派生而来，权利归原权利人所有，
+随仓库附带仅为运行演示用途，不构成任何授权或许可。
+
+如需公开发布或二次分发，请自行替换为原创或已获授权的素材
+（替换方法见 README「换皮肤 / 自制素材」一节）。
+作者不对素材的合规性负责。

@@ -1,0 +1,1737 @@
+{
+  "id": "sample-camel",
+  "name": "示例骆驼（蓝）",
+  "hidden": true,
+  "designSize": 192,
+  "availableSizes": [
+    128,
+    192,
+    256
+  ],
+  "baseScale": 1,
+  "anchor": "feet",
+  "states": {
+    "idle": {
+      "loop": true,
+      "frameDurationMs": 90,
+      "canvas": {
+        "width": 256,
+        "height": 264
+      },
+      "assets": [
+        {
+          "type": "png",
+          "path": "sprites/idle/{size}/{dpr}/000.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/idle/{size}/{dpr}/001.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/idle/{size}/{dpr}/002.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/idle/{size}/{dpr}/003.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/idle/{size}/{dpr}/004.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/idle/{size}/{dpr}/005.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/idle/{size}/{dpr}/006.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/idle/{size}/{dpr}/007.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/idle/{size}/{dpr}/008.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/idle/{size}/{dpr}/009.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/idle/{size}/{dpr}/010.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/idle/{size}/{dpr}/011.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/idle/{size}/{dpr}/012.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/idle/{size}/{dpr}/013.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/idle/{size}/{dpr}/014.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/idle/{size}/{dpr}/015.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/idle/{size}/{dpr}/016.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/idle/{size}/{dpr}/017.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/idle/{size}/{dpr}/018.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/idle/{size}/{dpr}/019.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/idle/{size}/{dpr}/020.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/idle/{size}/{dpr}/021.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/idle/{size}/{dpr}/022.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/idle/{size}/{dpr}/023.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/idle/{size}/{dpr}/024.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/idle/{size}/{dpr}/025.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/idle/{size}/{dpr}/026.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/idle/{size}/{dpr}/027.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/idle/{size}/{dpr}/028.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/idle/{size}/{dpr}/029.png"
+        }
+      ]
+    },
+    "blink": {
+      "loop": false,
+      "ambient": true,
+      "frameDurationMs": 80,
+      "canvas": {
+        "width": 256,
+        "height": 264
+      },
+      "assets": [
+        {
+          "type": "png",
+          "path": "sprites/blink/{size}/{dpr}/000.png",
+          "durationMs": 70
+        },
+        {
+          "type": "png",
+          "path": "sprites/blink/{size}/{dpr}/001.png",
+          "durationMs": 130
+        },
+        {
+          "type": "png",
+          "path": "sprites/blink/{size}/{dpr}/002.png",
+          "durationMs": 70
+        }
+      ]
+    },
+    "cheer": {
+      "label": "庆祝",
+      "loop": false,
+      "frameDurationMs": 50,
+      "canvas": {
+        "width": 256,
+        "height": 306
+      },
+      "assets": [
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/000.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/001.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/002.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/003.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/004.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/005.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/006.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/007.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/008.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/009.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/010.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/011.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/012.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/013.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/014.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/015.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/016.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/017.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/018.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/019.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/020.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/021.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/022.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/023.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/024.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/025.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/026.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/027.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/028.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/029.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/030.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/031.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/032.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/033.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/034.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/035.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/036.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/037.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/038.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/039.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/040.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/041.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/042.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/043.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/044.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/045.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/046.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/047.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/048.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/049.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/050.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/051.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/052.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/053.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/054.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/055.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/056.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/057.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/058.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/059.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/060.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/061.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/062.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/063.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/064.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/065.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/066.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/067.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/068.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/069.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/070.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/071.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/072.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/073.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/074.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/075.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/076.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/077.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/078.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/079.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/080.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/081.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/082.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/083.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/084.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/085.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/086.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/087.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/088.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/089.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/090.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer/{size}/{dpr}/091.png"
+        }
+      ]
+    },
+    "cheer2": {
+      "label": "庆祝2",
+      "loop": false,
+      "frameDurationMs": 50,
+      "canvas": {
+        "width": 256,
+        "height": 300
+      },
+      "assets": [
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/000.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/001.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/002.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/003.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/004.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/005.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/006.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/007.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/008.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/009.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/010.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/011.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/012.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/013.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/014.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/015.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/016.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/017.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/018.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/019.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/020.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/021.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/022.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/023.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/024.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/025.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/026.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/027.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/028.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/029.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/030.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/031.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/032.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/033.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/034.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/035.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/036.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/037.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/038.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/039.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/040.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/041.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/042.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/043.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/044.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/045.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/046.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/047.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/048.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/049.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/050.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/051.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/052.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/053.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/054.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/055.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/056.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/057.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/058.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/059.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/060.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/061.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/062.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/063.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/064.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/065.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/066.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/067.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/068.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/069.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/070.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/071.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/072.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/073.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/074.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/075.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/076.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/077.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/078.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/079.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/080.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/081.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/082.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/083.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/084.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/085.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/086.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/087.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/088.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/089.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/090.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/091.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/092.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/093.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/094.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/095.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/096.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/097.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/098.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/cheer2/{size}/{dpr}/099.png"
+        }
+      ]
+    },
+    "dive": {
+      "label": "跳水",
+      "loop": false,
+      "frameDurationMs": 50,
+      "canvas": {
+        "width": 256,
+        "height": 318
+      },
+      "assets": [
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/000.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/001.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/002.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/003.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/004.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/005.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/006.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/007.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/008.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/009.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/010.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/011.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/012.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/013.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/014.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/015.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/016.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/017.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/018.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/019.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/020.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/021.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/022.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/023.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/024.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/025.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/026.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/027.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/028.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/029.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/030.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/031.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/032.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/033.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/034.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/035.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/036.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/037.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/038.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/039.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/040.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/041.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/042.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/043.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/044.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/045.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/046.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/047.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/048.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/049.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/050.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/051.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/052.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/053.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/054.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/055.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/056.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/057.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/058.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/059.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/060.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/061.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/062.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/063.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/064.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/065.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/066.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/067.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/068.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/069.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/070.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/071.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/072.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/073.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/074.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/075.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/076.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/077.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/078.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/079.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/080.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/081.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/082.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/083.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/084.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/085.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/086.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/087.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/088.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/089.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/090.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/091.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/092.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/093.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/094.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/095.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/096.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive/{size}/{dpr}/097.png"
+        }
+      ]
+    },
+    "dive2": {
+      "label": "跳水2",
+      "loop": false,
+      "frameDurationMs": 50,
+      "canvas": {
+        "width": 256,
+        "height": 256
+      },
+      "assets": [
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/000.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/001.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/002.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/003.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/004.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/005.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/006.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/007.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/008.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/009.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/010.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/011.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/012.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/013.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/014.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/015.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/016.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/017.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/018.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/019.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/020.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/021.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/022.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/023.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/024.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/025.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/026.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/027.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/028.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/029.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/030.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/031.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/032.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/033.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/034.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/035.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/036.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/037.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/038.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/039.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/040.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/041.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/042.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/043.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/044.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/045.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/046.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/047.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/048.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/049.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/050.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/051.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/052.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/053.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/054.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/055.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/056.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/057.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/058.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/059.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/060.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/061.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/062.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/063.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/064.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/065.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/066.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/067.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/068.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/069.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/070.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/071.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/072.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/073.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/074.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/075.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/076.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/077.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/078.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/079.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/080.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/081.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/082.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/083.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/084.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/085.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/086.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/087.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/088.png"
+        },
+        {
+          "type": "png",
+          "path": "sprites/dive2/{size}/{dpr}/089.png"
+        }
+      ]
+    }
+  },
+  "defaultState": "idle",
+  "label": "示例骆驼（蓝）"
+}

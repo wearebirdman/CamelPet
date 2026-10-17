@@ -1,0 +1,46 @@
+{
+  "name": "camel-pet",
+  "productName": "骆驼桌宠",
+  "version": "1.0.0",
+  "description": "A Windows desktop pet with pixel-art skins (骆驼桌宠).",
+  "main": "src/main/index.js",
+  "scripts": {
+    "start": "electron . --no-sandbox --user-data-dir=temp/userdata",
+    "smoke": "node tools/smoke-test.cjs",
+    "voicepack-test": "node tools/voicepack-test.js",
+    "voicepack-repair": "node tools/repair-voicepacks.js",
+    "audio-loudness": "node tools/run-electron.cjs tools/audio-loudness-probe.js",
+    "audio-import-test": "node tools/run-electron.cjs tools/audio-import-test.js",
+    "capture": "node tools/run-electron.cjs tools/capture-sizes.cjs",
+    "capture-actions": "node tools/run-electron.cjs tools/capture-actions.cjs",
+    "settings-shot": "node tools/run-electron.cjs tools/settings-shot.cjs",
+    "menu-shot": "node tools/run-electron.cjs tools/menu-shot.cjs",
+    "menu-actions-check": "node tools/run-electron.cjs tools/menu-actions-check.cjs",
+    "volume-probe": "node tools/run-electron.cjs tools/volume-probe.js",
+    "menu-volume": "node tools/run-electron.cjs tools/menu-volume-check.cjs",
+    "scheduler-check": "node tools/run-electron.cjs tools/scheduler-check.cjs",
+    "drag-check": "node tools/run-electron.cjs tools/drag-check.cjs",
+    "real-settings": "node tools/real-settings.cjs",
+    "dock-check": "node tools/run-electron.cjs tools/dock-check.mjs",
+    "skin-check": "node tools/run-electron.cjs tools/skin-check.mjs",
+    "userdata-check": "node tools/userdata-check.js",
+    "pack": "node tools/build-launcher.cjs && electron-builder --dir",
+    "dist": "node tools/build-launcher.cjs && electron-builder",
+    "launcher": "node tools/build-launcher.cjs"
+  },
+  "keywords": [
+    "desktop-pet",
+    "electron",
+    "pixel-art",
+    "windows",
+    "shimeji",
+    "桌宠"
+  ],
+  "author": "CamelPet contributors",
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "electron": "^32.2.7",
+    "electron-builder": "^26.15.3"
+  }
+}
